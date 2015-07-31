@@ -19,7 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-.b-container{
+.container{
     width:200px;
     height:150px;
     background-color: #ccc;
@@ -28,7 +28,7 @@ time, mark, audio, video {
     font-size:30px;
     color: #fff;
 }
-.b-popup{
+.popup{
     width:100%;
     min-height:100%;
     background-color: rgba(0,0,0,0.5);
@@ -36,7 +36,7 @@ time, mark, audio, video {
     position:fixed;
     top:0px;
 }
-.b-popup .b-popup-content{
+.popup .popup-content{
 
     width:360px;
     height: 189px;
@@ -50,7 +50,7 @@ time, mark, audio, video {
 	margin-top:-94.5px;
 	overflow: hidden;
 }
-.b-popup-header{
+.popup-header{
 	text-align:center;
 	font:bold 14px Helvetica sans ;
 	font-family: Verdana, Verdana, Geneva, sans-serif;
@@ -58,11 +58,11 @@ time, mark, audio, video {
 	border-bottom:1px solid #bababa;
 	border-radius:5px 5px 0px 0px;
 }
-.b-popup-header p {
+.popup-header p {
 padding:15px  0;
 margin:0;
 }
-.b-popup-main{
+.popup-main{
 font:11px/17px Verdana,Verdana,Geneva sans-serif;
 padding:20px;
 text-align:center;
