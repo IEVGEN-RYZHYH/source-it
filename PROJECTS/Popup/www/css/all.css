@@ -71,61 +71,60 @@ time, mark, audio, video {
 	border-radius:5px 5px 0px 0px;
 }
 .popup-header p {
-padding:15px  0;
-margin:0;
-}
+	padding:15px  0;
+	margin:0;
+	}
 .popup-main{
-font:11px/17px Verdana,Verdana,Geneva sans-serif;
-padding:20px;
-text-align:center;
+	font:11px/17px Verdana,Verdana,Geneva sans-serif;
+	padding:20px;
+	text-align:center;
 }
 .button-container{
-margin:0 auto;
-text-align:center;
-color:#eff6e5;
-overflow:visible;
+	margin:0 auto;
+	text-align:center;
+	color:#eff6e5;
+	overflow:visible;
 }
 .yes{
-padding:7px 5px 10px 30px;
-border:1px solid #bababa;
-border-radius:3px;
-background:url(../img/yes.png) no-repeat, linear-gradient(to bottom, #a8d34e, #72b930) ;	
-background-position:5% center;
-color:#eff6e5;
-box-shadow: 0px 1px 1px #bcbcbc, 
-					inset 0px 0px 2px white;
-font:bold 11px Helvetica sans ;
-font-family: Verdana, Verdana, Geneva, sans-serif;
-margin:0 5px 0 0;
+	padding:7px 5px 10px 30px;
+	border:1px solid #bababa;
+	border-radius:3px;
+	background:url(../img/yes.png) no-repeat, linear-gradient(to bottom, #a8d34e, #72b930) ;	
+	background-position:5% center;
+	color:#eff6e5;
+	box-shadow: 0px 1px 1px #bcbcbc, 
+						inset 0px 0px 2px white;
+	font:bold 11px Helvetica sans ;
+	font-family: Verdana, Verdana, Geneva, sans-serif;
+	margin:0 5px 0 0;
 }
 .no{
-background:url(../img/no.png) no-repeat, linear-gradient(to bottom, #f77086, #f24654);
-padding:7px 5px 10px 30px;
-border:1px solid #bababa;
-border-radius:5px;
-background-position:5% center;
-color:#eff6e5;
-font:bold 11px Helvetica sans ;
-font-family: Verdana, Verdana, Geneva, sans-serif;
-box-shadow: 0px 1px 1px #bcbcbc, 
-					inset 0px 0px 2px white;
-
+	background:url(../img/no.png) no-repeat, linear-gradient(to bottom, #f77086, #f24654);
+	padding:7px 5px 10px 30px;
+	border:1px solid #bababa;
+	border-radius:5px;
+	background-position:5% center;
+	color:#eff6e5;
+	font:bold 11px Helvetica sans ;
+	font-family: Verdana, Verdana, Geneva, sans-serif;
+	box-shadow: 0px 1px 1px #bcbcbc, 
+						inset 0px 0px 2px white;
 }
 .no:hover, .yes:hover{
-position:relative;
-bottom:5px;
-z-index:100;
-cursor: pointer;
+	position:relative;
+	bottom:5px;
+	z-index:100;
+	cursor: pointer;
 }
 .no:hover{
-left:2px;
-box-shadow: -2px 5px 5px #bcbcbc,
-					inset 0px 0px 2px white;
+	left:2px;
+	box-shadow: -2px 5px 5px #bcbcbc,
+						inset 0px 0px 2px white;
 }
 .yes:hover{
-right:2px;
-box-shadow: 2px 5px 5px #bcbcbc,
-					inset 0px 0px 2px white;
+	right:2px;
+	box-shadow: 2px 5px 5px #bcbcbc,
+						inset 0px 0px 2px white;
 }
 
 
