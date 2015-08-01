@@ -3,17 +3,18 @@
 <head lang="en">
     <meta charset="UTF-8">
 		<link media="all" rel="stylesheet" href="css/all.css">
-    <title></title>
+    <title>Popup</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
-<div class="b-container">
-
-</div>
-<div class="b-popup">
-    <div class="b-popup-content">
-        <div class="b-popup-header"><p>Are you sure you want to do that?
+	<button class="container">
+		Push Me, please :-)
+	</button>
+	<div class="popup">
+    <div class="popup-content">
+        <div class="popup-header"><p>Are you sure you want to do that?
 		</div>
-		<div class="b-popup-main">
+		<div class="popup-main">
 		 <p>Clicking yes will make Comic Sans your new system default font. Seriously, have you thought this through?
 		</div>
 		<div class="button-container">
@@ -22,6 +23,40 @@
 		</div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        //# Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+    });
+    //# Функция отображения PopUp c выводом значения выбора пользователя
+    function PopUpShow(){
+        $(".popup").show();
+		function no() {
+		PopUpHide();
+		return console.log('false');
+		};
+		function yes() {
+		PopUpHide();
+		return console.log('true');
+		};
+		$('.no').on('click',no);
+		$('.yes').on('click',yes);
+		return (yes || no);
+    };
+	//# Првязываем событие к элементу документа
+	$('.container').on('click',PopUpShow);
+	
+    //# Функция скрытия PopUp
+    function PopUpHide(){
+        $(".popup").hide();
+    }
+	//# Закрываем при нажатии на кнопку
+
+
+
+</script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
