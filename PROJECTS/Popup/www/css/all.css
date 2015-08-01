@@ -109,8 +109,9 @@ font:bold 11px Helvetica sans ;
 font-family: Verdana, Verdana, Geneva, sans-serif;
 box-shadow: 0px 1px 1px #bcbcbc, 
 					inset 0px 0px 2px white;
+
 }
-.no:hover,yes:hover{
+.no:hover, .yes:hover{
 position:relative;
 bottom:5px;
 z-index:100;
