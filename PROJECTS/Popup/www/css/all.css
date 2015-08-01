@@ -43,7 +43,7 @@ time, mark, audio, video {
 .popup{
     width:100%;
     min-height:100%;
-    background-color: rgba(0,0,0,0.5);
+    background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(128,128,128,0));
     overflow:hidden;
     position:fixed;
     top:0px;
