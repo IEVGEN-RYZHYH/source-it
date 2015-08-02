@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+		<link media="all" rel="stylesheet" href="css/all.css">
+    <title>Runner</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+	<div id = "wrapper">
+		<div class="player">
+			<div>
+				<div class="runner"></div>
+			</div>
+			<button class="play">Play</button>
+			<button class="stop">Stop</button>
+			<button class="prev"> |<< </button>
+			<button class="next"> >>| </button>
+		</div>
+
+	</div><!--wrapper-->
+	    <script>
+
+		var n = 0;
+		var intervalID;
+		function play(){
+		intervalID = setInterval(function(){
+			n++
+			var run = document.querySelector(".runner");
+			run.style.marginLeft = n*2+ "px";
+			console.log(n);
+			},100);
+			
+			return console.log(intervalID);
+		};
+		function stop(){
+			clearInterval(intervalID);
+		}
+		function next(){
+			stop();
+			n = 0;
+			intervalID=0;
+			var run = document.querySelector(".runner");
+			run.style.marginLeft = n;
+			play();
+		}
+		function prev(){
+			stop();
+			n = 0;
+			intervalID=0;
+			var run = document.querySelector(".runner");
+			run.style.marginLeft = n;
+			play();
+		}
+		$('.play').on('click', play);
+		$('.stop').on('click', stop);
+		$('.next').on('click', next);
+		$('.prev').on('click', prev);
+
+		</script>
+</body>
+</html>
