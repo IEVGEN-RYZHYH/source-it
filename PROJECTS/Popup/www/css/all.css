@@ -47,9 +47,9 @@ time, mark, audio, video {
     overflow:hidden;
     position:fixed;
     top:0px;
+	
 }
 .popup .popup-content{
-
     width:360px;
     height: 189px;
     background-color: #fcfcfc;
@@ -61,6 +61,7 @@ time, mark, audio, video {
 	margin-left:-180px;
 	margin-top:-94.5px;
 	overflow: hidden;
+	z-index:1;
 }
 .popup-header{
 	text-align:center;
@@ -73,7 +74,7 @@ time, mark, audio, video {
 .popup-header p {
 	padding:15px  0;
 	margin:0;
-	}
+}
 .popup-main{
 	font:11px/17px Verdana,Verdana,Geneva sans-serif;
 	padding:20px;
@@ -85,7 +86,26 @@ time, mark, audio, video {
 	color:#eff6e5;
 	overflow:visible;
 }
+.close{
+	/* border:1px solid black; */
+	border-radius:40px;
+	position:absolute;
+	overflow:hidden;
+	top:50%;
+	left:50%;
+	font:15px/15px Verdana,Verdana,Geneva sans-serif;
+	margin:-107px 0 0 176px;
+	padding:0 4px 4px 4px;
+	z-index:2;
+	cursor: default;
+	box-shadow: 0px 0px 10px #000, 
+						inset 0px 0px 30px red;
+	text-shadow:1px 1px 1px grey;
+	background-color:red;
+	color:#f9f9f9;
+}
 .yes{
+	cursor: pointer;
 	padding:7px 5px 10px 30px;
 	border:1px solid #bababa;
 	border-radius:3px;
@@ -96,9 +116,13 @@ time, mark, audio, video {
 						inset 0px 0px 2px white;
 	font:bold 11px Helvetica sans ;
 	font-family: Verdana, Verdana, Geneva, sans-serif;
-	margin:0 5px 0 0;
+	margin:0 5px  0;
+	-webkit-transition: background 0.5s ease;
+	-moz-transition: background 0.5s ease;
+	transition: background 0.5s ease;
 }
 .no{
+	cursor: pointer;
 	background:url(../img/no.png) no-repeat, linear-gradient(to bottom, #f77086, #f24654);
 	padding:7px 5px 10px 30px;
 	border:1px solid #bababa;
@@ -114,7 +138,6 @@ time, mark, audio, video {
 	position:relative;
 	bottom:5px;
 	z-index:100;
-	cursor: pointer;
 }
 .no:hover{
 	left:2px;

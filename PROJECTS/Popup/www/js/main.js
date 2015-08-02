@@ -14,7 +14,8 @@
 		PopUpHide();
 		return console.log('true');
 		};
-		$('.no').on('click',no);
+		
+		$('.no, .close').on('click',no);
 		$('.yes').on('click',yes);
 		return (yes || no);
     };
