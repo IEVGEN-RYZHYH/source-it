@@ -18,15 +18,60 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+button{margin:0;
+border-radius:20px;
+box-shadow:1px 1px 2px grey;
+}
 #wrapper{
 	margin:0 auto;
 }
-.play{
-
+.monitor{
+min-width:592px;
+min-height:450px;
+background-color:#363636;
+border:4px solid #B0B0B0;
+box-shadow:1px 1px 2px grey, 
+					inset 1px 1px 2px grey;
+}
+.player{
+	width:600px;
+	margin:0 auto;
 }
 .runner{
-width:150px;
-height:150px;
-background-color:red;
-margin:0 0 0 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #B0B0B0;
+    border-bottom: 5px solid transparent;
+	position:relative;
+	top:-5.5px;
+	display:inline-block;
+}
+.runnerHolder{
+	background-color:#363636;
+	height:10px;
+	margin-top:15px;
+	margin-bottom:5px;
+	overflow:hidden;
+	box-shadow:1px 1px 2px grey;
+
+}
+.triangle{
+color:green;
+}
+.square{
+color:red;
+}
+.runnerTrail{
+background-color:#B0B0B0;
+height:15.5px;
+display:inline-block;
+margin-right:-4px;
+position:relative;
+top:-6px;
+}
+.pause{
+display:none;
+}
+.timer{
+float:right;
+display:inline-block;
 }

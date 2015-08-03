@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -9,53 +9,90 @@
 <body>
 	<div id = "wrapper">
 		<div class="player">
-			<div>
+			<div class="monitor"></div>
+			<div class="runnerHolder">
+				<div class="runnerTrail"></div>
 				<div class="runner"></div>
 			</div>
-			<button class="play">Play</button>
-			<button class="stop">Stop</button>
-			<button class="prev"> |<< </button>
-			<button class="next"> >>| </button>
+			<div>
+				<button class="play"><span class="triangle"> &#9654;</span></button>
+				<button class="pause"> &#9646;&#9646;</button>
+				<button class="stop"><span class="square">&#9646;</span></button>			
+				<button class="prev"> &#9664;&#9664; </button>
+				<button class="next"> &#9654;&#9654;</button>
+				<div class="timer"><span class="minutes">00</span>:<span class="seсonds">00</span></div>
+			<div>
 		</div>
+		  <div class="block">
+
+			</div>
 
 	</div><!--wrapper-->
 	    <script>
 
 		var n = 0;
+		var x=0;
 		var intervalID;
+		var timerID;
+		
+		function time(){
+			timerID = setInterval(
+			function timer(x){
+			var sec = document.querySelector(".seсonds");
+			x++;
+			sec. innerHTML = x;
+			
+			},
+			100);
+			};
+			
 		function play(){
 		intervalID = setInterval(function(){
 			n++
-			var run = document.querySelector(".runner");
-			run.style.marginLeft = n*2+ "px";
+			var trail = document.querySelector(".runnerTrail");
+			trail.style.width = n*2+ "px";
+			$('.play').css("display","none");
+			$('.pause').fadeIn(150);
+			
+			
+			if(trail.style.width === "590px"){
+			stop();
+			};
 			console.log(n);
 			},100);
-			
+			time();
 			return console.log(intervalID);
 		};
+		function pause(){
+			clearInterval(intervalID);
+			$('.pause').css("display","none");
+			$('.play').fadeIn(150);
+
+		}
 		function stop(){
 			clearInterval(intervalID);
+			$('.play').fadeIn(150);
+			n = 0;
+			intervalID=0;
+			var trail = document.querySelector(".runnerTrail");
+			trail.style.width = n;
+			$('.pause').css("display","none");
 		}
 		function next(){
 			stop();
-			n = 0;
-			intervalID=0;
-			var run = document.querySelector(".runner");
-			run.style.marginLeft = n;
 			play();
+			
 		}
 		function prev(){
 			stop();
-			n = 0;
-			intervalID=0;
-			var run = document.querySelector(".runner");
-			run.style.marginLeft = n;
 			play();
 		}
 		$('.play').on('click', play);
+		$('.pause').on('click', pause);
 		$('.stop').on('click', stop);
 		$('.next').on('click', next);
 		$('.prev').on('click', prev);
+
 
 		</script>
 </body>
