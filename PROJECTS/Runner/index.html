@@ -9,19 +9,21 @@
 <body>
 	<div id = "wrapper">
 		<div class="player">
-			<div class="monitor"></div>
-			<div class="runnerHolder">
-				<div class="runnerTrail"></div>
-				<div class="runner"></div>
+			<div class="monitor">
+				<div class = "controlPanel">
+					<div class="runnerHolder">
+						<div class="runnerTrail"></div>
+						<div class="runner"></div>
+					</div>
+		
+					<button class="play"><span class="triangle"> &#9654;</span></button>
+					<button class="pause"> &#9646;&#9646;</button>
+					<button class="stop"><span class="square">&#9646;</span></button>			
+					<button class="prev"> &#9664;&#9664; </button>
+					<button class="next"> &#9654;&#9654;</button>
+					<div class="timer"><span class="minutes">00</span>:<span class="seсonds">00</span></div>
+				</div>
 			</div>
-			<div>
-				<button class="play"><span class="triangle"> &#9654;</span></button>
-				<button class="pause"> &#9646;&#9646;</button>
-				<button class="stop"><span class="square">&#9646;</span></button>			
-				<button class="prev"> &#9664;&#9664; </button>
-				<button class="next"> &#9654;&#9654;</button>
-				<div class="timer"><span class="minutes">00</span>:<span class="seсonds">00</span></div>
-			<div>
 		</div>
 		  <div class="block">
 
@@ -44,6 +46,13 @@
 			},
 			100);
 			};
+		function show(){
+			$('.controlPanel').css("display","block");
+		}
+
+			function hide(){
+			$('.controlPanel').fadeOut(150);
+			};
 			
 		function play(){
 		intervalID = setInterval(function(){
@@ -52,14 +61,11 @@
 			trail.style.width = n*2+ "px";
 			$('.play').css("display","none");
 			$('.pause').fadeIn(150);
-			
-			
 			if(trail.style.width === "590px"){
 			stop();
 			};
 			console.log(n);
 			},100);
-			time();
 			return console.log(intervalID);
 		};
 		function pause(){
@@ -91,7 +97,7 @@
 		$('.stop').on('click', stop);
 		$('.next').on('click', next);
 		$('.prev').on('click', prev);
-
+		$('.monitor').hover(show,hide);
 
 		</script>
 </body>
