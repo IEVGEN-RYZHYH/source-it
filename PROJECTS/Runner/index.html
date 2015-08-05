@@ -33,18 +33,36 @@
 	    <script>
 
 		var n = 0;
-		var x= 0;
+		var s= 0;
+		var m = 0;
 		var intervalID;
 		var timerID;
 		
 		function time(){
 			timerID = setInterval(
-			function timer(x){
+			function timer(){
 			var sec = document.querySelector(".seсonds");
-			x++;
-			sec. innerHTML = x;
+			s++ ;
+			if(s<10){
+			sec. innerHTML ="0"+s ;}
+			else if(s=>10){
+					if(s===60){
+					s = 0;
+					sec. innerHTML = "00" ;
+					var min = document.querySelector(".minutes");
+					m++;	
+						if(m<10){
+							min. innerHTML = "0" +m;};
+						if(m=>10){
+							if(m===60){
+								m = 0;
+								min. innerHTML = "00" ;}	
+							else {stop();}
+						min. InnerHTML = m ;}
+					};
+				sec. innerHTML = s ;}
 			},
-			100);
+			1000);
 			};
 		function show(){
 			$('.controlPanel').css("display","block");
@@ -58,29 +76,40 @@
 		intervalID = setInterval(function(){
 			n++
 			var trail = document.querySelector(".runnerTrail");
-			trail.style.width = n*2+ "px";
+			trail.style.width = n + "px";
 			$('.play').css("display","none");
 			$('.pause').fadeIn(150);
 			if(trail.style.width === "590px"){
 			stop();
 			};
 			console.log(n);
-			},100);
+			},150);
+			time();
 			return console.log(intervalID);
 		};
 		function pause(){
 			clearInterval(intervalID);
+			clearInterval(timerID);
 			$('.pause').css("display","none");
 			$('.play').fadeIn(150);
 
 		}
 		function stop(){
 			clearInterval(intervalID);
+			clearInterval(timerID);
 			$('.play').fadeIn(150);
 			n = 0;
+			s = 0;
+			m = 0;
 			intervalID=0;
+			timerID=0;
 			var trail = document.querySelector(".runnerTrail");
+			var sec = document.querySelector(".seсonds");
+			var min = document.querySelector(".minutes");
 			trail.style.width = n;
+			sec. innerHTML = "00" ;
+			min. innerHTML = "00" ; 
+			
 			$('.pause').css("display","none");
 		}
 		function next(){
