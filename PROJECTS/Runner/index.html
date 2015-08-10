@@ -67,11 +67,9 @@
 		function show(){
 			$('.controlPanel').css("display","block");
 		}
-
 			function hide(){
 			$('.controlPanel').fadeOut(150);
 			};
-			
 		function play(){
 		intervalID = setInterval(function(){
 			n++
@@ -126,7 +124,7 @@
 		$('.stop').on('click', stop);
 		$('.next').on('click', next);
 		$('.prev').on('click', prev);
-		$('.monitor').hover(show,hide);
+		$('.monitor').hover(show, function(){return setTimeout(hide,5000);});
 
 		</script>
 </body>
